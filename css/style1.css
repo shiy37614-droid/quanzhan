@@ -1,0 +1,11 @@
+p{
+    font-size: 20px;
+}
+
+.card p{
+    color: red;
+}
+
+.card > p{
+    background-color: yellow;
+}

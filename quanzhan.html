@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>我的个人主页</title>
+  </head>   
+
+
+  
+
+  <body>
+    <header class="nav">
+       <div class="logo">我的主页</div>
+       <nav>
+            <a href="#">首页</a>
+            <a href="#">技能</a>
+            <a href="#">联系</a>
+       </nav>
+    </header>
+    
+    <main>
+        <section class="card">
+            <h2>关于我：</h2>
+            <p>大家好，我正在学习前端开发。</p>
+            <p>我的目标是成为一名前端工程师。</p>
+        </section>
+        
+        <section class="card">
+            <h2>我的学习计划：</h2>
+            <ol>
+                <li>学习 HTML</li>
+                <li>学习 CSS</li>
+                <li>学习 JavaScript</li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <h2>我喜欢的网站：</h2>
+            <a href="https://www.baidu.com/" >百度</a>
+            <a href="https://www.bilibili.com/" target="_blank">Bilibili</a>
+        </section>
+    
+
+        <section class="card">
+            <h2>我的图片：</h2>
+            <img src="images/cat.jpg" alt="这是一只可爱的小猫咪">
+        </section>
+
+        <section class="skills">
+            <div class="card">
+                HTML
+            </div>
+
+            <div class="card">
+                CSS
+            </div>
+
+            <div class="card">
+                JavaScript
+            </div>
+
+            <div class="card">
+                React
+            </div>
+
+            <div class="card">
+                Git
+            </div>
+
+            <div class="card">
+                Node
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        
+        <form action="" method="get">
+            <p class="contact-title">联系我</p>
+            <label for="name">你的名字：</label>
+            <input id="name" name="name" type="text" required placeholder="请输入你的名字" minlength="2" maxlength="20">
+            <label for="email">你的邮箱：</label>
+            <input id="email" name="email" type="email" placeholder="请输入你的邮箱" required>
+
+            <label for="message">请留言：</label>
+            <textarea name="message" id="message" placeholder="请输入你的留言" required></textarea>
+
+            <button>提交</button>
+        </form>
+    </footer>
+    
+  </body>
+</html>

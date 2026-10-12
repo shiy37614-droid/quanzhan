@@ -1,0 +1,107 @@
+:root{
+    --primary-color:#2563eb;
+
+    /* 背景颜色 */
+    --background-color:#f8fafc;
+
+    /* 字体颜色 */
+    --text-color:#1e293b; 
+
+    --card-color:#ffffff;
+}
+
+
+/* css reset */
+*{
+    margin:0;
+
+    padding:0;
+
+    /* border-box 定义总宽度 不再加上padding */
+    box-sizing:border-box;
+}
+
+/* 整个网站统一背景、字体颜色、字体 */
+body{
+
+    background-color: 
+    var(--background-color);
+
+    color: 
+    var(--text-color);
+
+    /* 字体 优先arial 如果没有使用系统无衬线字体*/
+    font-family: 
+    Arial,sans-serif;
+}
+
+
+
+.nav{
+
+    /* flex布局 开启弹性布局 开启之后：子元素自动排列 */
+    display: flex;
+
+    /* felx里面控制主轴，横向排列 */
+    justify-content: space-between;
+
+    /* 控制交叉轴，纵向对齐 */
+    align-items: center;
+
+    /* 上下20px 左右10% */
+    padding: 20px 10%;
+}
+
+.logo{
+
+    font-size: 24px;
+    
+    font-weight: bold;
+    
+    color: 
+    var(--primary-color);
+}
+
+.nav a{
+    /* 默认下划线 */
+    text-decoration:none;
+
+    color:
+    var(--text-color);
+
+    margin-left:20px;
+}
+
+.nav a:hover{
+
+    color: 
+    var(--primary-color);
+}
+
+.hero{
+
+    /* viewport height：视口高度。80vh就是hero至少占屏幕80% */
+    min-height:80vh;
+
+    display:flex;
+
+    /* 垂直排列 */
+    flex-direction:column;
+
+    /* 水平+垂直居中 */
+    justify-content:center;
+
+    align-items:center;
+
+    /* 文字内部居中 */
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    color:
+    var(--primary-color); 
+}
