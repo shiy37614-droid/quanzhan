@@ -1,106 +1,132 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="zh-CN">
   <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/style.css">
     <title>我的个人主页</title>
-  </head>   
-
-
-  
+  </head>
 
   <body>
     <header class="nav">
-       <div class="logo">我的主页</div>
-       <nav>
-            <a href="#">首页</a>
-            <a href="#">技能</a>
-            <a href="#">联系</a>
-            <p>hello Git</p>
-            <p>My first GitHub project</p>
-       </nav>
+      <div class="logo">✨ 我的主页</div>
+
+      <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link">首页</a>
+        <a href="#about" class="nav-link">关于我</a>
+        <a href="#skills" class="nav-link">技能</a>
+        <a href="#contact" class="nav-link">联系</a>
+      </nav>
     </header>
-    
+
     <main>
-        <section class="card">
-            <h2>关于我：</h2>
-            <p>大家好，我正在学习前端开发。</p>
-            <p>我的目标是成为一名前端工程师。</p>
-        </section>
-        
-        <section class="card">
-            <h2>我的学习计划：</h2>
-            <ol>
-                <li>学习 HTML</li>
-                <li>学习 CSS</li>
-                <li>学习 JavaScript</li>
-            </ol>
-        </section>
+      <!-- 首屏 -->
+      <section class="hero" id="home">
+        <p class="hero-greeting">你好，欢迎来到我的主页 👋</p>
+        <h1>我正在学习<span class="gradient-text">前端开发</span></h1>
+        <p class="hero-sub">我的目标是成为一名前端工程师，用代码把想法变成好看的网页。</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-primary">了解我</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+      </section>
 
-        <section class="card">
-            <h2>我喜欢的网站：</h2>
-            <a href="https://www.baidu.com/" >百度</a>
-            <a href="https://www.bilibili.com/" target="_blank">Bilibili</a>
-        </section>
-    
+      <!-- 关于我 -->
+      <section class="section" id="about">
+        <h2 class="section-title">关于我</h2>
+        <div class="card">
+          <p>大家好，我正在学习前端开发。</p>
+          <p>我的目标是成为一名前端工程师。</p>
+        </div>
+      </section>
 
-        <section class="card">
-            <h2>我的图片：</h2>
-            <img src="images/cat.jpg" alt="这是一只可爱的小猫咪">
-        </section>
+      <!-- 学习计划 -->
+      <section class="section" id="plan">
+        <h2 class="section-title">我的学习计划</h2>
+        <ol class="plan-list">
+          <li class="plan-item"><span class="plan-num">01</span>学习 HTML</li>
+          <li class="plan-item"><span class="plan-num">02</span>学习 CSS</li>
+          <li class="plan-item"><span class="plan-num">03</span>学习 JavaScript</li>
+        </ol>
+      </section>
 
-        <section class="skills">
-            <div class="card">
-                HTML
-            </div>
+      <!-- 技能 -->
+      <section class="section" id="skills">
+        <h2 class="section-title">我的技能</h2>
+        <div class="skills">
+          <div class="skill-card"><span class="icon">🧱</span>HTML</div>
+          <div class="skill-card"><span class="icon">🎨</span>CSS</div>
+          <div class="skill-card"><span class="icon">⚡</span>JavaScript</div>
+          <div class="skill-card"><span class="icon">⚛️</span>React</div>
+          <div class="skill-card"><span class="icon">🌿</span>Git</div>
+          <div class="skill-card"><span class="icon">🟢</span>Node</div>
+        </div>
+      </section>
 
-            <div class="card">
-                CSS
-            </div>
+      <!-- 喜欢的网站 -->
+      <section class="section" id="favorites">
+        <h2 class="section-title">我喜欢的网站</h2>
+        <div class="link-group">
+          <a class="pill-link" href="https://www.baidu.com/" target="_blank" rel="noopener">🔍 百度</a>
+          <a class="pill-link" href="https://www.bilibili.com/" target="_blank" rel="noopener">📺 Bilibili</a>
+        </div>
+      </section>
 
-            <div class="card">
-                JavaScript
-            </div>
-
-            <div class="card">
-                React
-            </div>
-
-            <div class="card">
-                Git
-            </div>
-
-            <div class="card">
-                Node
-            </div>
-
-        </section>
-
-        <section>
-            <h2>关于我</h2>
-            <p>这是我的个人介绍页面</p>
-        </section>
-        
+      <!-- 我的图片 -->
+      <section class="section" id="gallery">
+        <h2 class="section-title">我的图片</h2>
+        <figure class="figure">
+          <img src="images/cat.jpg" alt="这是一只可爱的小猫咪">
+          <figcaption>一只可爱的小猫咪 🐱</figcaption>
+        </figure>
+      </section>
     </main>
 
-    <footer>
-        
-        <form action="" method="get">
-            <p class="contact-title">联系我</p>
-            <label for="name">你的名字：</label>
+    <footer id="contact">
+      <div class="footer-inner">
+        <h2 class="section-title">联系我</h2>
+        <form class="contact-form" action="" method="get">
+          <div class="form-field">
+            <label for="name">你的名字</label>
             <input id="name" name="name" type="text" required placeholder="请输入你的名字" minlength="2" maxlength="20">
-            <label for="email">你的邮箱：</label>
+          </div>
+          <div class="form-field">
+            <label for="email">你的邮箱</label>
             <input id="email" name="email" type="email" placeholder="请输入你的邮箱" required>
-
-            <label for="message">请留言：</label>
+          </div>
+          <div class="form-field">
+            <label for="message">请留言</label>
             <textarea name="message" id="message" placeholder="请输入你的留言" required></textarea>
-
-            <button>提交</button>
+          </div>
+          <button class="btn btn-primary" type="submit">提交</button>
         </form>
+        <p class="footer-note">© 2026 我的主页 · 用心学习前端</p>
+      </div>
     </footer>
-    
+
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.querySelector('.nav-links');
+
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        toggle.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          toggle.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
   </body>
 </html>
